@@ -1,0 +1,17 @@
+.past {
+    margin: 100rpx auto -105rpx;
+    padding: 0 10rpx;
+    font-size: 160%;
+    font-weight: 300;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    opacity: .9;
+}

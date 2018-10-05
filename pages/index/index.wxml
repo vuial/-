@@ -1,0 +1,41 @@
+<view class="container{{bgsrc?' zoomout':''}}{{isiPhoneX?' ct-iphonex':''}}">
+    <view class="header">
+    <view >    <text>　</text></view>
+     <view >    <text>　</text></view>
+      <view >    <text>　</text></view>
+       <view >    <text>　</text></view>
+    <view bindtap="viewHistory" class="main">
+        <view class="cell"></view>
+        <view class="months">
+            <view class="remaining">
+                <view class="remaining-before" style="top: {{100-remaining}}%;"></view>
+                <view class="remaining-after" style="top: {{100-remaining}}%;"></view>
+                <view class="remaining-txt" style="height: {{remaining-3}}%;" wx:if="{{remaining>=6}}">{{remaining}}%</view>
+            </view>
+        </view>
+        <text>已过 ：{{100-remaining}}%</text>
+         <text>剩余：{{remaining}}%</text>
+   
+           <view >    <text>　</text></view>
+            <view >    <text>　</text></view>
+           
+        <view class="indicator-block indicator-{{activeIndex}}">
+            <view class="indicator" wx:for="{{history}}" wx:key="indicator"></view>
+        </view>
+
+ <view><text>点击屏幕切换年月日</text></view>
+        <view class="past">
+            <view>{{today}}</view>
+        </view>
+        </view >
+         
+        
+    </view>
+</view>
+ 
+<block wx:if="{{canHideTabBar}}">
+    <import src="../../templates/nav.wxml"></import>
+    <view class="{{platform}}{{isiPhoneX?' nav-iphonex':''}}">
+        <template is="nav" data="{{pagename:'countdown'}}"></template>
+    </view>
+</block>
